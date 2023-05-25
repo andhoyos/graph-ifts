@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    background-color: #0d1117;
+    color: #a7b5c4;
+}  
+main{
+    margin: 10vh auto;
+}  
+h1{
+    text-align: center;
+}
+.content-graph{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid gray;
+    border-radius:15px;
+    margin:1%;
+    padding: 1rem;
+    background-color: #141b22;
+}
