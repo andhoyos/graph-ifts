@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gráficos de Víctimas</title>
+    <title>Siniestros viales Ciudad de Buenos Aires</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="style.css" />
@@ -11,10 +11,13 @@
 
   <body>
     <main>
-      <h1>Gráficos de Víctimas</h1>
+      <h1>Siniestros viales Ciudad de Buenos Aires</h1>
       <div class="content-graph">
         <div>
           <canvas id="chartVehiculos" width="400" height="400"></canvas>
+        </div>
+        <div id="contenedor">
+          <div class="loader" id="loader">Loading...</div>
         </div>
         <div>
           <canvas id="chartComunas" width="400" height="400"></canvas>

@@ -2,6 +2,9 @@ fetch('data.json')
   .then(response => response.json())
   .then(data => {
     
+    const loader = document.getElementById('contenedor')
+    loader.style.display = 'none'
+    
     const victimasPorVehiculo = data.reduce((acc, obj) => {
       const tipoVehiculo = obj.tipo || 'Desconocido';
       acc[tipoVehiculo] = acc[tipoVehiculo] ? acc[tipoVehiculo] + 1 : 1;
