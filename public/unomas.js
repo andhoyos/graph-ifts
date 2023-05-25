@@ -77,11 +77,11 @@ const canvasSexo = document.getElementById('chartSexo');
 const ctxSexo = canvasSexo.getContext('2d');
   
 new Chart(ctxSexo, {
-    type: 'pie',
+    type:'doughnut',
     data: {
       labels: SexoTop,
       datasets: [{
-        data: SexoTop.map(tipo => victimasPorSexo[tipo]),
+        data: SexoTop.map(sexo => victimasPorSexo[sexo]),
         backgroundColor: [         
           'rgba(75, 192, 192, 0.7)',
           'rgba(153, 102, 255, 0.7)',
@@ -89,7 +89,7 @@ new Chart(ctxSexo, {
           'rgba(255, 0, 0, 0.7)',
           'rgba(0, 255, 0, 0.7)',
           'rgba(0, 0, 255, 0.7)',
-          'rgba(128, 128, 128, 0.7)' // Se agregó un color adicional para el décimo tipo de vehículo
+          'rgba(128, 128, 128, 0.7)' // Se agregó un color adicional para el décimo sexo de vehículo
         ],
         borderWidth:'1'
       }]
@@ -111,7 +111,122 @@ new Chart(ctxSexo, {
         }
     }
   });
-  
+   //victimas por Edad
+    const victimasPorEdad = data.reduce((acc, obj) => {
+      const edad = obj.edad || 'Desconocido';
+      acc[edad] = acc[edad] ? acc[edad] + 1 : 1;
+      return acc;
+    }, {});   
+
+    // Ordenar los Edad de vehículos por cantidad de víctimas de mayor a menor
+    const EdadOrdenados = Object.keys(victimasPorEdad).sort((a, b) => {
+      return victimasPorEdad[b] - victimasPorEdad[a];
+    });
+  //victimas por Edad
+  const EdadFiltrados = EdadOrdenados.filter(Edad => victimasPorEdad[Edad] > 100);
+    //Obtener Edad
+  const EdadTop = EdadOrdenados.slice(0, 15);
+
+const canvasEdad = document.getElementById('chartEdad');
+const ctxEdad = canvasEdad.getContext('2d');
+
+new Chart(ctxEdad, {
+  type: 'polarArea',
+  data: {
+    labels: EdadTop,
+    datasets: [{
+      data: EdadTop.map(edad => victimasPorEdad[edad]),
+      backgroundColor: [         
+        'rgba(75, 192, 192, 0.7)',
+        'rgba(153, 102, 255, 0.7)',
+        'rgba(255, 159, 64, 0.7)',
+        'rgba(255, 0, 0, 0.7)',
+        'rgba(0, 255, 0, 0.7)',
+        'rgba(0, 0, 255, 0.7)',
+        'rgba(128, 128, 128, 0.7)',
+        'rgba(255, 99, 132, 0.7)',
+        'rgba(54, 162, 235, 0.7)',
+        'rgba(255, 206, 86, 0.7)', // Se agregó un color adicional para el décimo sexo de vehículo
+      ],
+      borderWidth:'1'
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+          display: true,
+          labels: {
+              color: '#e9edef'
+          }
+      }
+  },
+    responsive: true,
+    maintainAspectRatio: false,
+    title: {
+      display: true,
+      text: 'Victimas por Edad',
+      }
+  }
+});
+   //victimas por Tipo_colision
+   const victimasPorTipo_colision = data.reduce((acc, obj) => {
+    const tipo_colision1 = obj.tipo_colision1 || 'Desconocido';
+    acc[tipo_colision1] = acc[tipo_colision1] ? acc[tipo_colision1] + 1 : 1;
+    return acc;
+  }, {});   
+
+  // Ordenar los Tipo_colision de vehículos por cantidad de víctimas de mayor a menor
+  const Tipo_colisionOrdenados = Object.keys(victimasPorTipo_colision).sort((a, b) => {
+    return victimasPorTipo_colision[b] - victimasPorTipo_colision[a];
+  });
+//victimas por Tipo_colision
+const Tipo_colisionFiltrados = Tipo_colisionOrdenados.filter(Tipo_colision => victimasPorTipo_colision[Tipo_colision] > 100);
+  //Obtener Tipo_colision
+const Tipo_colisionTop = Tipo_colisionOrdenados.slice(0, 10);
+
+const canvasTipo_colision = document.getElementById('chartTipo_colision');
+const ctxTipo_colision = canvasTipo_colision.getContext('2d');
+
+new Chart(ctxTipo_colision, {
+type: 'scatter',
+data: {
+  labels: Tipo_colisionTop,
+  datasets: [{
+    type: 'bar',
+    label:'Victimas por tipo de Colision',
+    data: Tipo_colisionTop.map(tipo_colision1 => victimasPorTipo_colision[tipo_colision1]),
+    backgroundColor: [         
+      'rgba(75, 192, 192, 0.7)',
+      'rgba(153, 102, 255, 0.7)',
+      'rgba(255, 159, 64, 0.7)',
+      'rgba(255, 0, 0, 0.7)',
+      'rgba(0, 255, 0, 0.7)',
+      'rgba(0, 0, 255, 0.7)',
+      'rgba(128, 128, 128, 0.7)',
+      'rgba(255, 99, 132, 0.7)',
+      'rgba(54, 162, 235, 0.7)',
+      'rgba(255, 206, 86, 0.7)', // Se agregó un color adicional para el décimo sexo de vehículo
+    ],
+    borderWidth:'1'
+  }]
+},
+options: {
+  plugins: {
+    legend: {
+        display: true,
+        labels: {
+            color: '#e9edef'
+        }
+    }
+},
+  responsive: true,
+  maintainAspectRatio: false,
+  title: {
+    display: true,
+    text: 'Victimas por Tipo_colision',
+    }
+}
+});
   });
 
   
