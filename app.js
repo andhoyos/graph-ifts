@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 app.get('/informe-siniestros', (req, res) => {
-  res.sendFile(__dirname + '/informe-siniestros.html');
+  res.sendFile(__dirname + '/public/informe-siniestros.html');
 });
 
 app.listen(3300, () => {
