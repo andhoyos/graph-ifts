@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph Ifts - Siniestros viales Ciudad de Buenos Aires</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Siniestros viales Ciudad de Buenos Aires</h1>
+      <div class="content-graph">
+        <div>
+          <canvas id="chartVehiculos" width="400" height="400"></canvas>
+        </div>
+        <div id="contenedor">
+          <div class="loader" id="loader">Loading...</div>
+        </div>
+        <div>
+          <canvas id="chartComunas" width="400" height="400"></canvas>
+        </div>
+      </div>
+      <div class="content-graph">
+        <div>
+          <canvas id="chartVictimasPorAnio" width="400" height="400"></canvas>
+        </div>
+        <div>
+          <canvas id="chartVictimasPorMes" width="400" height="400"></canvas>
+        </div>
+      </div>
+      <div class="content-graph">
+        <div>
+          <canvas id="chartRol" width="400" height="400"></canvas>
+        </div>
+        <div>
+          <canvas id="chartSexo" width="400" height="400"></canvas>
+        </div>
+      </div>
+      <div class="content-graph">
+        <div>
+          <canvas id="chartEdad" width="400" height="400"></canvas>
+        </div>
+        <div>
+          <canvas id="chartTipo_colision" width="400" height="400"></canvas>
+        </div>
+      </div>
+      <div class="integrantes">
+        <h3>Proyecto realizado para la materia PPII por:</h3>
+        <br />
+        <h5>
+          Arierl Marchioni / Miguel Quiñonez / Jean Thelusma / Andres Hoyos
+        </h5>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="adition.js"></script>
+    <script src="unomas.js"></script>
+  </body>
+</html>

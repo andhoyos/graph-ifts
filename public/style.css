@@ -2,11 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Raleway", sans-serif
   }
-body{
+
+  
+  body{
     background-color: #0d1117;
     color: #a7b5c4;
-}  
+  }  
+  .shape-divider {
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    padding: 1%;
+  }
+  
+  .text-inicio{
+    text-align: center;
+    position: relative;
+    margin-top: -17%;
+    padding: 5%;
+    width: 50%;
+    float: right;
+  }
 h1{
     text-align: center;
     padding: 3%;
@@ -20,7 +38,49 @@ h1{
     padding: 1rem;
     background-color: #141b22;
 }
-
+.integrantes{
+  border-top: 2px solid gray;
+  padding: 3%;
+  text-align: center;
+}
+.integrantes h5{
+  width: 60%;
+  margin: auto;
+}
+/* btn informe */
+.pulse{
+  -webkit-animation: pulse 1.3s;
+          animation: pulse 1.3S;
+          animation-iteration-count:infinite;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.pulse {  
+  border-radius: 10px;
+    border: none;
+    padding: 8px;
+  --hover: #ef8f6e;
+}
+.pulse {
+  background-color: #F9A826;  
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.pulse:hover{
+  animation-iteration-count:unset;
+}
+.pulse:active{
+  animation-iteration-count:unset;
+}
+.pulse a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
 @media screen and (max-width: 600px) {
     h1{
         font-size: 1.5rem;
@@ -33,6 +93,16 @@ h1{
     }
     h1{
         padding:10%;
+    }
+    .shape-divider{
+      margin-top: 20%;
+    }
+    .shape-divider img{
+      width: -webkit-fill-available;
+    }
+    .text-inicio{
+      margin-top: 15%;
+      width:60%
     }
   }
 
