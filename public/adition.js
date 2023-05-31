@@ -1,4 +1,4 @@
-fetch('data.json')
+fetch('/api/data')
   .then(response => response.json())
   .then(data => {
     const filteredData = data.filter(obj => {
