@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="style-index.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Raleway"
@@ -15,32 +17,34 @@
     />
     <title>Graph Ifts - Inicio</title>
   </head>
-  <body >
+  <body>
     <div class="container">
-      <div class="shape-divider">
+      <div class="shape-divider" data-aos="zoom-in" data-aos-duration="2000">
         <img src="inicio.svg" alt="" />
-        <div class="text-inicio">
-      <div>
-        <h4>Siniestros Viales Ciudad de Buenos Aires</h4>
+        <div class="text-inicio" data-aos="zoom-in-up" data-aos-duration="3000">
+          <div>
+            <h4>Siniestros Viales Ciudad de Buenos Aires</h4>
 
-        <br />
-        <h5>
-          Analisis realizado al dataset de Siniestros viales de la ciudad de
-          Buenos Aires, el informe comprende las fechas desde enero del 2015
-          hasta Mayo del 2018.
-        </h5>
-      </div>
-      <br />
-      <div>
-        <button class="pulse">
-          <a href="informe-siniestros.html">
-            Ver Informe <i class="fa fa-bar-chart"></i>
-          </a>
-        </button>
+            <br />
+            <h5>
+              Analisis realizado al dataset de Siniestros viales de la ciudad de
+              Buenos Aires, el informe comprende las fechas desde enero del 2015
+              hasta Mayo del 2018.
+            </h5>
+          </div>
+          <br />
+          <div>
+            <button class="pulse">
+              <a href="informe-siniestros.html">
+                Ver Informe <i class="fa fa-bar-chart"></i>
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-      </div>
-    
-    </div>
+    <script type="text/javascript">
+      AOS.init();
+    </script>
   </body>
 </html>

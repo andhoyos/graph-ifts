@@ -1,9 +1,23 @@
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  let nav = document.querySelector(".navbar");
+  var currentScrollPos = window.pageYOffset;  
+      if (prevScrollpos < currentScrollPos) {
+      nav.style.top = "-100px";
+    } else {
+      nav.style.top = "0";
+    }
+
+  prevScrollpos = currentScrollPos;
+};
+
+
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
     
-    const loader = document.getElementById('contenedor')
-    loader.style.display = 'none'
+    // const loader = document.getElementById('contenedor')
+    // loader.style.display = 'none'
     
     const victimasPorVehiculo = data.reduce((acc, obj) => {
       const tipoVehiculo = obj.tipo || 'Desconocido';

@@ -33,14 +33,18 @@ section{
 .seccion-texto{
   font-size: 1.2rem;
 }
-
-
-
 /* Navbar */
 
 .navbar{
-  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1.3rem;
   background-color: #f5f6f7;
+  
+  transition: transform 0.4s;
+  transition: all 0.4s ease 0.4s;
 }
 
 .navbar-collapse{
@@ -55,8 +59,8 @@ section{
 /*Sobre mi*/
 
 .sobre-mi{
-  height: 500px;
-  padding: 10px;
+  height: 100vh;
+  padding: 10% 10px 10px;
 }
 
 .sobre-mi .contenedore{
@@ -72,8 +76,7 @@ h1{
 }
 
 
-.content-graph{
-    
+.content-graph{    
     border: 2px solid gray;
     border-radius:15px;
     margin:1%;
@@ -87,9 +90,6 @@ h1{
   flex-wrap: wrap-reverse;
 
 }
-
-
-
   .content-text{
     background-color: #34444f;
     text-align: center;
@@ -98,12 +98,12 @@ h1{
     align-items: center ;
     width: 50%;
     padding: 15px;
+    font-size:1rem
   }
-
+/* 
 .content-comunas{
   flex-wrap: wrap;
-}
-
+} */
 
 
 .integrantes{
