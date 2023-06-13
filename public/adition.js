@@ -52,7 +52,7 @@ fetch('data.json')
           },
           title: {
             display: true,
-            text: 'Victimas por Año',
+            text: 'Víctimas por Año',
             padding: {
                 top: 10,
                 bottom: 20
@@ -104,7 +104,7 @@ fetch('data.json')
           },
           title: {
             display: true,
-            text: 'Victimas por Mes',
+            text: 'Víctimas por Mes',
             padding: {
                 top: 10,
                 bottom: 20

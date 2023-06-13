@@ -82,7 +82,7 @@ new Chart(ctxVehiculos, {
       },
       title: {
         display: true,
-        text: 'Victimas por tipo de vehiculo',
+        text: 'Víctimas por tipo de vehiculo',
         padding: {
             top: 10,
             bottom: 20
@@ -135,7 +135,7 @@ new Chart(ctxVehiculos, {
           },
           title: {
             display: true,
-            text: 'Victimas por Comuna',
+            text: 'Víctimas por Comuna',
             padding: {
                 top: 10,
                 bottom: 20

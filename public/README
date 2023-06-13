@@ -1,21 +1,21 @@
 Graph-IFTS
 Trabajo practico realizado para la materia Práctica Profesional II (PPII),
-de la Tecnicatura Superor en Desarrollo de Software del Instituto de Formacion Tecnica Superior 18.
-Se tomo para el trabajo el dataset de siniestros viales de la ciudad de Buenos Aires, correspondiente a las fechas entre Enero de 2015 y Mayo de 2018, inicialmente se habia realizado el analisis de los datos con Power BI y para integracion en la web utilizamos la biblioteca ChartJS.
+de la Tecnicatura Superior en Desarrollo de Software del Instituto de Formación Técnica Superior 18.
+Se tomo para el trabajo el dataset de siniestros viales de la ciudad de Buenos Aires, correspondiente a las fechas entre Enero de 2015 y Mayo de 2018, inicialmente se había realizado el análisis de los datos con Power BI y para integración en la web utilizamos la biblioteca ChartJS.
 
 Aviso de datos:
-Los datos aqui utilizados son descriptivos y no deben ser utilizados como única referencia para tomar decisiones.
+Los datos aquí utilizados son descriptivos y no deben ser utilizados como única referencia para tomar decisiones.
 
 Algunos de los datos analizados.
 -Victimas por año.
--Edad de las vicitimas.
--Tipo de rol que ocupaba la victimas.
--Comunas con mayor cantidad de victimas.
+-Edad de las víctimas.
+-Tipo de rol que ocupaba las víctimas.
+-Comunas con mayor cantidad de víctimas.
 
-Al referirnos a victimas estamos incluyendo tanto de personas lesionadas como personas fallecidas en los siniestros.
+Al referirnos a víctimas estamos incluyendo tanto de personas lesionadas como personas fallecidas en los siniestros.
 
 Deploy del proyecto 🚀
-Para el deploy de proyecto lo hicimos en Vercel que es una plataforma unificada en la nube que permite a los desarrolladores desplegar y gestionar sus aplicaciones y sitios web. Vercel proporciona tambien una amplia gama de funciones, como despliegues automatizados, dominios personalizados.
+Para el deploy de proyecto lo hicimos en Vercel que es una plataforma unificada en la nube que permite a los desarrolladores desplegar y gestionar sus aplicaciones y sitios web. Vercel proporciona también una amplia gama de funciones, como despliegues automatizados, dominios personalizados.
 
 Link del proyecto
 https://graph-ifts.vercel.app/

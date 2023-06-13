@@ -44,7 +44,7 @@ fetch('data.json')
           },
           title: {
             display: true,
-            text: 'Victimas por Rol',
+            text: 'Víctimas por Rol',
             padding: {
                 top: 10,
                 bottom: 20
@@ -69,7 +69,7 @@ fetch('data.json')
       }
     });
 
-     //victimas por sexo
+     //Víctimas por sexo
     const victimasPorSexo = data.reduce((acc, obj) => {
         const sexo = obj.sexo || 'Desconocido';
         acc[sexo] = acc[sexo] ? acc[sexo] + 1 : 1;
@@ -80,7 +80,7 @@ fetch('data.json')
       const sexoOrdenados = Object.keys(victimasPorSexo).sort((a, b) => {
         return victimasPorSexo[b] - victimasPorSexo[a];
       });
-    //victimas por sexo
+    //Víctimas por sexo
     const sexoFiltrados = sexoOrdenados.filter(sexo => victimasPorSexo[sexo] > 100);
       //Obtener sexo
     const SexoTop = sexoOrdenados.slice(0, 2);
@@ -116,7 +116,7 @@ new Chart(ctxSexo, {
         },
         title: {
           display: true,
-          text: 'Victimas por Sexo',
+          text: 'Víctimas por Sexo',
           padding: {
               top: 10,
               bottom: 20
@@ -130,11 +130,11 @@ new Chart(ctxSexo, {
       maintainAspectRatio: false,
       title: {
         display: true,
-        text: 'Victimas por Sexo',
+        text: 'Víctimas por Sexo',
         }
     }
   });
-   //victimas por Edad
+   //Víctimas por Edad
     const victimasPorEdad = data.reduce((acc, obj) => {
       const edad = obj.edad || 'Desconocido';
       acc[edad] = acc[edad] ? acc[edad] + 1 : 1;
@@ -145,7 +145,7 @@ new Chart(ctxSexo, {
     const EdadOrdenados = Object.keys(victimasPorEdad).sort((a, b) => {
       return victimasPorEdad[b] - victimasPorEdad[a];
     });
-  //victimas por Edad
+  //Víctimas por Edad
   const EdadFiltrados = EdadOrdenados.filter(Edad => victimasPorEdad[Edad] > 100);
     //Obtener Edad
   const EdadTop = EdadOrdenados.slice(0, 15);
@@ -184,7 +184,7 @@ new Chart(ctxEdad, {
       },
       title: {
         display: true,
-        text: 'Victimas por Edad',
+        text: 'Víctimas por Edad',
         padding: {
             top: 10,
             bottom: 20
@@ -198,11 +198,11 @@ new Chart(ctxEdad, {
     maintainAspectRatio: false,
     title: {
       display: true,
-      text: 'Victimas por Edad',
+      text: 'Víctimas por Edad',
       }
   }
 });
-   //victimas por Tipo_colision
+   //Víctimas por Tipo_colision
    const victimasPorTipo_colision = data.reduce((acc, obj) => {
     const tipo_colision1 = obj.tipo_colision1 || 'Desconocido';
     acc[tipo_colision1] = acc[tipo_colision1] ? acc[tipo_colision1] + 1 : 1;
@@ -213,7 +213,7 @@ new Chart(ctxEdad, {
   const Tipo_colisionOrdenados = Object.keys(victimasPorTipo_colision).sort((a, b) => {
     return victimasPorTipo_colision[b] - victimasPorTipo_colision[a];
   });
-//victimas por Tipo_colision
+//Víctimas por Tipo_colision
 const Tipo_colisionFiltrados = Tipo_colisionOrdenados.filter(Tipo_colision => victimasPorTipo_colision[Tipo_colision] > 100);
   //Obtener Tipo_colision
 const Tipo_colisionTop = Tipo_colisionOrdenados.slice(0, 10);
@@ -227,7 +227,7 @@ data: {
   labels: Tipo_colisionTop,
   datasets: [{
     type: 'bar',
-    label:'Victimas por tipo de Colision',
+    label:'Víctimas por tipo de Colision',
     data: Tipo_colisionTop.map(tipo_colision1 => victimasPorTipo_colision[tipo_colision1]),
     backgroundColor: [         
       'rgba(75, 192, 192, 0.7)',
@@ -254,7 +254,7 @@ options: {
     },
     title: {
       display: true,
-      text: 'Victimas por Tipo de Colision',
+      text: 'Víctimas por Tipo de Colision',
       padding: {
           top: 10,
           bottom: 20
@@ -268,7 +268,7 @@ options: {
   maintainAspectRatio: false,
   title: {
     display: true,
-    text: 'Victimas por Tipo_colision',
+    text: 'Víctimas por Tipo_colision',
     }
 }
 });
