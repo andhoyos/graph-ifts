@@ -1,3 +1,4 @@
+AOS.init();
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
@@ -40,7 +41,18 @@ fetch('data.json')
               labels: {
                   color: '#e9edef'
               }
+          },
+          title: {
+            display: true,
+            text: 'Victimas por Rol',
+            padding: {
+                top: 10,
+                bottom: 20
+            },
+            font: {
+              size: 20
           }
+        }
       },
         responsive: true,
         maintainAspectRatio: false,
@@ -101,7 +113,18 @@ new Chart(ctxSexo, {
             labels: {
                 color: '#e9edef'
             }
+        },
+        title: {
+          display: true,
+          text: 'Victimas por Sexo',
+          padding: {
+              top: 10,
+              bottom: 20
+          },
+          font: {
+            size: 20
         }
+      }
     },
       responsive: true,
       maintainAspectRatio: false,
@@ -158,7 +181,18 @@ new Chart(ctxEdad, {
           labels: {
               color: '#e9edef'
           }
+      },
+      title: {
+        display: true,
+        text: 'Victimas por Edad',
+        padding: {
+            top: 10,
+            bottom: 20
+        },
+        font: {
+          size: 20
       }
+    }
   },
     responsive: true,
     maintainAspectRatio: false,
@@ -217,7 +251,18 @@ options: {
         labels: {
             color: '#e9edef'
         }
+    },
+    title: {
+      display: true,
+      text: 'Victimas por Tipo de Colision',
+      padding: {
+          top: 10,
+          bottom: 20
+      },
+      font: {
+        size: 20
     }
+  }
 },
   responsive: true,
   maintainAspectRatio: false,

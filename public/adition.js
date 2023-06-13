@@ -1,3 +1,4 @@
+AOS.init();
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
@@ -48,7 +49,18 @@ fetch('data.json')
               labels: {
                   color: '#e9edef'
               }
+          },
+          title: {
+            display: true,
+            text: 'Victimas por Año',
+            padding: {
+                top: 10,
+                bottom: 20
+            },
+            font: {
+              size: 20
           }
+        }
       },
         responsive: true,
         maintainAspectRatio: false,
@@ -89,7 +101,27 @@ fetch('data.json')
               labels: {
                   color: '#e9edef'
               }
+          },
+          title: {
+            display: true,
+            text: 'Victimas por Mes',
+            padding: {
+                top: 10,
+                bottom: 20
+            },
+            font: {
+              size: 20
           }
+        }
+      },
+      animations: {
+        tension: {
+          duration: 1000,
+          easing: 'linear',
+          from: 1,
+          to: 0,
+          loop: true
+        }
       },
         responsive: true,
         maintainAspectRatio: false,

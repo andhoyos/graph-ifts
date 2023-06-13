@@ -6,179 +6,293 @@
     <title>Graph Ifts - Siniestros viales Ciudad de Buenos Aires</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Rubik+Dirt&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <!-- Nav bar -->
-  <nav class="navbar navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-toggler"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-      <div class="collapse navbar-collapse" id="navbar-toggler">
-          <a class="navbar-brand" href="#"><img src="images/1.png" alt=""></a>
-        <ul class="navbar-nav d-flex justify-content-center align-items-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#acerca">Acerca de</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="#vehiculos">Vehiculos</a>
-           </li>
-          <li class="nav-item">
-            <a class="nav-link "  href="#victimas">Victimas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link "  href="#rol">Rol</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link "  href="#edades">Edades</a>
-          </li>
-      </ul>
-        
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <a class="navbar-brand" href="#"><img src="images/1.png" alt="" /></a>
+          <ul
+            class="navbar-nav d-flex justify-content-center align-items-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#acerca"
+                >Acerca de</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vehiculos">Vehiculos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#victimas">Victimas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#rol">Rol</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#edades">Edades</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <!-- nav -->
+    <!--Sobre mi -->
+    <section class="sobre-mi seccion-oscura" id="acerca">
+      <div class="contenedore">
+        <h2 class="seccion-titulo">Descargo de responsabilidad:</h2>
+        <p class="seccion-texto">
+          Esta web utiliza datos proporcionados por el gobierno de la ciudad
+          sobre siniestros con el propósito de ofrecer información y análisis
+          relacionados. Es importante tener en cuenta que estos datos fueron
+          utilizados por estudiantes para un trabajo práctico y se presentan con
+          la intención de brindar conocimientos generales. Sin embargo, se debe
+          tener precaución al interpretar y utilizar los datos presentados en
+          esta plataforma.
+        </p>
       </div>
-  </nav>
-  <!-- nav -->
- <!--Sobre mi -->
-  <section class=" sobre-mi seccion-oscura" id="acerca">
-    <div class="contenedore">
-      <h2 class="seccion-titulo">Descargo de responsabilidad:</h2>
-      <p class="seccion-texto">Esta web utiliza datos proporcionados por el gobierno de la ciudad sobre siniestros con el propósito de ofrecer información y análisis relacionados. Es importante tener en cuenta que estos datos fueron utilizados por estudiantes para un trabajo práctico y se presentan con la intención de brindar conocimientos generales.
-
-Sin embargo, se debe tener precaución al interpretar y utilizar los datos presentados en esta plataforma.</p>
-    </div>
-  </section>
+    </section>
     <main>
       <h1>Siniestros viales Ciudad de Buenos Aires</h1>
-       <!--vehiculos -->
-      <div class="content-graph " id="vehiculos">
-        <div class="content-vehiculos">
+      <div
+        class="content-graph"
+        id="vehiculos"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <div>
           <div>
             <canvas id="chartVehiculos" width="400" height="400"></canvas>
           </div>
-          <div class="content-text">
-            <p class="seccion-texto">Aviso de datos: Tipos de vehículos en siniestros
-
-Los datos mostrados son sobre los tipos de vehículos involucrados en siniestros. Recuerda que estos datos son descriptivos y no deben ser utilizados como única referencia para tomar decisiones.</p>
+          <div class="content-btn">
+            <button class="btn-description" onclick="canvas('chartVehiculos')">
+              Ver Descripción
+            </button>
+            <p id="title-chartVehiculos">Victimas por Tipo de Vehiculo</p>
+            <p id="description-chartVehiculos">
+              Los datos mostrados son sobre los diferentes tipos de vehículos
+              involucrados en siniestros. Recuerda que estos datos son
+              descriptivos y no deben ser utilizados como única referencia para
+              tomar decisiones.
+            </p>
           </div>
         </div>
-        <!--
         <div id="contenedor">
           <div class="loader" id="loader">Loading...</div>
         </div>
-        -->
-        <div class="content-vehiculos content-comunas">
-          <div class="content-text">
-            <p class="seccion-texto">Comunas involucradas en siniestros
-
-Aquí se presenta información sobre las comunas involucradas en siniestros, proporcionando una visión general de las áreas afectadas por incidentes. Explora esta información para obtener una perspectiva más completa.</p>
-          </div>
+        <div>
           <div>
-          <canvas id="chartComunas" width="400" height="400"></canvas>
-        </div>
+            <canvas id="chartComunas" width="400" height="400"></canvas>
+          </div>
+          <div class="content-btn">
+            <button class="btn-description" onclick="canvas('chartComunas')">
+              Ver Descripción
+            </button>
+            <p id="title-chartComunas">Victimas por Comuna</p>
+            <p id="description-chartComunas">
+              Aquí se presenta información sobre las comunas involucradas en
+              siniestros, proporcionando una visión general de las áreas
+              afectadas por incidentes. Explora esta información para obtener
+              una perspectiva más completa.
+            </p>
+          </div>
         </div>
       </div>
-       <!--separador-->
-      <div class="content-graph" id="victimas">
-        <div class="content-vehiculos">
+      <div class="content-graph" data-aos="fade-up" data-aos-duration="1500">
+        <div>
           <div>
-            <canvas id="chartVictimasPorAnio" width="400" height="400"></canvas>
+            <canvas
+              id="chartVictimasPorAnio"
+              id="victimas"
+              width="400"
+              height="400"
+            ></canvas>
           </div>
-          <div class="content-text">
-            <p class="seccion-texto">
-              Víctimas por año
-
-              Aquí se presenta información sobre el número de víctimas registradas por año, proporcionando una perspectiva general de la magnitud y el impacto de los incidentes. Explora estos datos para comprender mejor la situación y la evolución de las víctimas a lo largo del tiempo.</p>
+          <div class="content-btn">
+            <button
+              class="btn-description"
+              onclick="canvas('chartVictimasPorAnio')"
+            >
+              Ver Descripción
+            </button>
+            <p id="title-chartVictimasPorAnio">Victimas por Año</p>
+            <p id="description-chartVictimasPorAnio">
+              Aquí se presenta información sobre el número de víctimas
+              registradas por año, proporcionando una perspectiva general de la
+              magnitud y el impacto de los incidentes. Explora estos datos para
+              comprender mejor la situación y la evolución de las víctimas a lo
+              largo del tiempo.
+            </p>
           </div>
         </div>
 
-       
-
-        <div class="content-vehiculos content-comunas">
-          <div class="content-text">
-            <p class="seccion-texto">Cantidad de víctimas por mes
-
-            Aquí se muestra información sobre la cantidad de víctimas registradas por mes, proporcionando una visión detallada de la evolución y distribución de las tragedias a lo largo del año. Explora estos datos para tener una mejor comprensión de la frecuencia y variación mensual de las víctimas.</p>
-          </div>
+        <div>
           <div>
             <canvas id="chartVictimasPorMes" width="400" height="400"></canvas>
           </div>
+          <div class="content-btn">
+            <button
+              class="btn-description"
+              onclick="canvas('chartVictimasPorMes')"
+            >
+              Ver Descripción
+            </button>
+            <p id="title-chartVictimasPorMes">Victimas por Mes</p>
+            <p id="description-chartVictimasPorMes">
+              Aquí se muestra información sobre la cantidad de víctimas
+              registradas por mes, proporcionando una visión detallada de la
+              evolución y distribución de las tragedias a lo largo del año.
+              Explora estos datos para tener una mejor comprensión de la
+              frecuencia y variación mensual de las víctimas.
+            </p>
+          </div>
         </div>
-       </div>  
       </div>
-      <!--separador-->
-      <div class="content-graph" id="rol">
-        <div class="content-vehiculos">
+      <div
+        class="content-graph"
+        id="rol"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <div>
           <div>
             <canvas id="chartRol" width="400" height="400"></canvas>
-
           </div>
-          <div class="content-text">
-            <p class="seccion-texto">Aviso de datos: Tipos de vehículos en siniestros
-
-              Los datos mostrados son sobre los tipos de vehículos involucrados en siniestros. Recuerda que estos datos son descriptivos y no deben ser utilizados como única referencia para tomar decisiones.</p>
+          <div class="content-btn">
+            <button class="btn-description" onclick="canvas('chartRol')">
+              Ver Descripción
+            </button>
+            <p id="title-chartRol">Victimas por Rol</p>
+            <p id="description-chartRol">
+              Aquí se presenta información sobre el el rol de las víctimas
+              involucradas en los incidentes, proporcionando una visión
+              desglosada de los diferentes actores viales en los sucesos
+              ocurridos. Explora esta información para comprender mejor el tipo
+              de rol en relación con las víctimas de los incidentes.
+            </p>
           </div>
-
         </div>
-        <div class="content-vehiculos content-comunas">
-          <div class="content-text">
-            <p class="seccion-texto">Sexo de las víctimas
-
-              Aquí se presenta información sobre el sexo de las víctimas involucradas en los incidentes, proporcionando una visión desglosada de la distribución y proporción de género en los sucesos ocurridos. Explora esta información para comprender mejor la dimensión de género en relación con las víctimas de los incidentes.</p>
-          </div>
+        <div>
           <div>
             <canvas id="chartSexo" width="400" height="400"></canvas>
           </div>
-
+          <div class="content-btn">
+            <button class="btn-description" onclick="canvas('chartSexo')">
+              Ver Descripción
+            </button>
+            <p id="title-chartSexo">Victimas por Sexo</p>
+            <p id="description-chartSexo">
+              Aquí se presenta información sobre el sexo de las víctimas
+              involucradas en los incidentes, proporcionando una visión
+              desglosada de la distribución y proporción de género en los
+              sucesos ocurridos. Explora esta información para comprender mejor
+              la dimensión de género en relación con las víctimas de los
+              incidentes.
+            </p>
+          </div>
         </div>
-        <!-- separador -->
-
       </div>
-      <div class="content-graph" id="edades">
-        <div class="content-vehiculos">
+      <div
+        class="content-graph"
+        id="edades"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <div>
           <div>
             <canvas id="chartEdad" width="400" height="400"></canvas>
           </div>
-          <div class="content-text">
-            <p class="seccion-texto">Edad de las víctimas
-
-                Aquí se muestra información sobre la edad de las víctimas involucradas en los incidentes, brindando una visión detallada de la distribución y rangos de edad de las personas afectadas. Explora esta información para comprender mejor el impacto en diferentes grupos de edad y la vulnerabilidad asociada a cada segmento etario.</p>
+          <div class="content-btn">
+            <button class="btn-description" onclick="canvas('chartEdad')">
+              Ver Descripción
+            </button>
+            <p id="title-chartEdad">Victimas por Edad</p>
+            <p id="description-chartEdad">
+              Aquí se muestra información sobre la edad de las víctimas
+              involucradas en los incidentes, brindando una visión detallada de
+              la distribución y rangos de edad de las personas afectadas.
+              Explora esta información para comprender mejor el impacto en
+              diferentes grupos de edad y la vulnerabilidad asociada a cada
+              segmento etario.
+            </p>
           </div>
-
         </div>
-        
-        <div class="content-vehiculos content-comunas">
-          <div class="content-text">
-            <p class="seccion-texto">
-              Tipo de colisión
-
-            Aquí se presenta información sobre el tipo de colisión ocurrido en los incidentes, proporcionando una descripción de los diferentes tipos de colisiones registrados. Explora esta información para obtener una mejor comprensión de los distintos escenarios de colisión y sus características asociadas.</p>
-          </div>
+        <div>
           <div>
-          <canvas id="chartTipo_colision" width="400" height="400"></canvas>
-        </div>
+            <canvas id="chartTipo_colision" width="400" height="400"></canvas>
+          </div>
+          <div class="content-btn">
+            <button
+              class="btn-description"
+              onclick="canvas('chartTipo_colision')"
+            >
+              Ver Descripción
+            </button>
+            <p id="title-chartTipo_colision">Victimas por tipo de Colisión</p>
+            <p id="description-chartTipo_colision">
+              Aquí se presenta información sobre el tipo de colisión ocurrido en
+              los incidentes, proporcionando una descripción de los diferentes
+              tipos de colisiones registrados. Explora esta información para
+              obtener una mejor comprensión de los distintos escenarios de
+              colisión y sus características asociadas.
+            </p>
+          </div>
         </div>
       </div>
-      <footer class="integrantes">
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3 id="title-modal"></h3>
+          <p id="text-modal"></p>
+        </div>
+      </div>
+      <div class="integrantes">
         <h3>Proyecto realizado para la materia PPII por:</h3>
         <br />
         <h5>
-          Ariel Marchioni / Miguel Quiñonez / Jean Thelusma / Andres Hoyos
+          Arierl Marchioni / Miguel Quiñonez / Jean Thelusma / Andres Hoyos
         </h5>
-      </footer>
+      </div>
     </main>
 
     <script src="script.js"></script>
     <script src="adition.js"></script>
     <script src="unomas.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
